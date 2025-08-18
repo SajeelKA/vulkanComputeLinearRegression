@@ -1,4 +1,0 @@
-Change directory to bin
-run command "cmake .."
-run command "make"
-run commmand "./main"
