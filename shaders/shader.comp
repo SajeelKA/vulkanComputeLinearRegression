@@ -1,0 +1,21 @@
+#version 430
+// local_size_x, local_size_y and local_size_z, define the total threads per workgroup
+layout(local_size_x = 256, local_size_y = 1) in;
+
+
+layout(std430, binding = 0) buffer w { float weight[]; };
+layout(std430, binding = 1) buffer b { float bias[]; };
+layout(std430, binding = 2) buffer t { float target[]; };
+layout(std430, binding = 3) buffer lr1 { float lr;};
+layout(std430, binding = 4) buffer x1 { float x[];}; 
+layout(std430, binding = 5) buffer wrtW { float dEdW[];}; 
+layout(std430, binding = 6) buffer wrtB { float dEdB[];}; 
+
+void main() {
+
+	uint index = gl_GlobalInvocationID.x;
+
+	dEdW[index] = 2 * ((weight[0] * x[index] + bias[0]) - target[index]) * x[index]; // (derivative of mse error function wrt weight)		
+	
+	dEdB[index] = 2 * ((weight[0] * x[index] + bias[0]) - target[index]); // (derivative of mse error function wrt bias)
+}
