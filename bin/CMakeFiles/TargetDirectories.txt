@@ -1,4 +1,0 @@
-/home/aalimsaalan/vulkanComputeLinearRegression/bin/CMakeFiles/rebuild_cache.dir
-/home/aalimsaalan/vulkanComputeLinearRegression/bin/CMakeFiles/edit_cache.dir
-/home/aalimsaalan/vulkanComputeLinearRegression/bin/CMakeFiles/main.dir
-/home/aalimsaalan/vulkanComputeLinearRegression/bin/CMakeFiles/compile-shaders.dir
