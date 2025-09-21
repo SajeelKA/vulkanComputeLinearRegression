@@ -1,5 +1,5 @@
 # vulkanComputeLinearRegression
-A repository to demonstrate an exercise in Linear Regression using Vulkan processing
+A repository to demonstrate a minimalistic exercise in Linear Regression using Vulkan processing
 
 # INSTRUCTIONS
 
